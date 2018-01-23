@@ -1,10 +1,3 @@
-% A BEGINNER'S CHEAT SHEET TO VIM
-% Author: Lance Lafontaine (lancelafontaine.github.io)
-% Last Edit: 2015-01-13
-%
-% DISCLAIMER: This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License (http://creativecommons.org/licenses/by-nc-sa/3.0/). The cheatsheet template was adapted from Winston Chang's version found at http://www.stdout.org/~winston/latex/. This cheatsheet is intended for non-commercial use.
-
-
 \documentclass[10pt,landscape]{article}
 \usepackage{multicol}
 \usepackage{ifthen}
@@ -56,32 +49,26 @@
 \setlength{\columnsep}{2pt}
 
 \begin{center}
-     \Large{\underline{\textbf{Beginner's Vim Cheat Sheet}}} \\
+     \Large{\underline{\textbf{My Vim Cheat Sheet}}} \\
 \end{center}
 
-\textbf{Remember: }\textit{These can all be used with a repeater.}
+% \textbf{Remember: }\textit{These can all be used with a repeater.}
 
 \section{Movement}
 \verb!h/j/k/l! \hfill Move left/down/up/right.\\
-\verb!Ctrl+d! \hfill Move half-screen down.\\
-\verb!Ctrl+u! \hfill Move half-screen up.\\
-\verb!Ctrl+f! \hfill Move full screen forward.\\
-\verb!Ctrl+b! \hfill Move full screen backward.\\
+\verb!Space! \hfill Move half-screen down.\\
+\verb!Ctrl+b! \hfill Move half-screen up.\\
 \verb! !\\
-\verb!M! \hfill Bring cursor to middle of screen.\\
-\verb!H! \hfill Bring cursor to top of screen.\\
-\verb!3H! \hfill Bring cursor to 3 lines from top of screen.\\
-\verb!L! \hfill Bring cursor to bottom of screen.\\
-\verb!3L! \hfill Bring cursor to 3 lines from bottom of screen.\\
 \verb!zt! \hfill Make cursor position top of window.\\
 \verb!zz! \hfill Make cursor position middle of window.\\
 \verb!zb! \hfill Make cursor position bottom of window.\\
 \verb! !\\
 \verb!w/b! \hfill Go to next/previous delimiter.\\
 \verb!W/B! \hfill Go to next/previous word.\\
+\verb!e/E! \hfill Go to end of the word, \\ \hfill with/without considering punctuation.\\
 \verb! !\\
-\verb!$! \hfill Go to end of line.\\
-\verb!^! \hfill Go to first letter of a line.\\
+\verb!L! \hfill Go to end of line.\\
+\verb!H! \hfill Go to first letter of a line.\\
 \verb!0! \hfill Go to beginning of a line.\\
 \verb!gg/G! \hfill Go to beginning/end of the file.\\
 \verb!{/}! \hfill Go to beginning/end of paragraph.\\ 
@@ -92,12 +79,9 @@
 \verb!tP! \hfill Find delimiter before next P.\\
 \verb!TP! \hfill Find delimiter after previous P.\\
 \verb! !\\
-\verb!ma! \hfill Record a marker in the register "a".\\
-\verb!'a! \hfill Move to marker a.\\
-\verb!''! \hfill Toggle between marker and previous position.\\
-\verb! !\\
 \verb!v! \hfill Visual mode. \verb!j/k! to highlight text.\\
 \verb!V! \hfill Visual Line mode. Highlight full lines.\\
+\verb!gv! \hfill Reselect previously selected block of text\\
 \verb! !\\
 \textit{In Visual mode, pressing \% under a bracket highlights until matching bracket.}\\
 \verb! !\\
@@ -126,6 +110,7 @@
 \verb!Ctrl + r! \hfill Redo change.\\
 \verb! !\\
 \verb!yw/yy! \hfill Copy a word/line.\\
+\verb!Y! \hfill Copy until the end of line \\
 \verb! ! \\
 \verb!p/P! \hfill Paste, delete character on/after cursor.\\
 \verb! !\\
@@ -142,28 +127,14 @@
 \hfill \verb!:! \textit{can be replaced by other separators.}\\
 \verb!:%s:old:new:c! \hfill Prompt before each replacement.\\
 
-\section{Macros}
-\verb!qa! \hfill Record a macro in register "a".\\
-\verb!j0q! \hfill Stop recording the macro.\\
-\verb!:reg! \hfill List all registers.\\
-\verb!@a! \hfill Execute macro in register "a".\\
-\verb!@@! \hfill Execute previous macro.\\
-
 \section{Buffers, Windows and Tabs}
 \verb!:ls! \hfill List all buffers in session.\\
-\verb!:bn! \hfill Navigate to next buffer.\\
-\verb!:bp! or \verb!:b#! \hfill Navigate to previous buffer.\\
-\verb!:bf! \hfill Navigate to first buffer.\\
-\verb!:bd! \hfill Delete current buffer.\\
-\verb!:bd1! \hfill Delete buffer labeled "1".\\ 
+\verb!:Tab! \hfill Navigate to next buffer.\\
 \verb! !\\
 \verb!:vs ~/file! \hfill Open file in vertical pane.\\
 \verb!:sp ~/file! \hfill Open file in horizontal pane.\\   
-\verb!:vert sb2! \hfill Open buffer 2 in vertical pane.\\
-\verb!:sb2! \hfill Opens buffer 2 in horizontal pane.\\
 \verb! !\\
-\verb!Ctrl + w + h/j/k/l! \hfill Move to * window.\\
-\verb!Ctrl + w + /H/J/K/L! \hfill Move window to * side.\\                                   
+\verb!Ctrl + h/j/k/l! \hfill Move to * window.\\
 \verb!Ctrl + w + 1+! \hfill Increase window height by 1.\\      
 \verb!Ctrl + w + 1-! \hfill Decrease window height by 1.\\                                                                        
 \verb!Ctrl + w + >!  \hfill Increase window width by 1.\\     
@@ -171,20 +142,11 @@
 \verb!Ctrl + w + =!  \hfill Equalize height and width of all windows.\\
 \verb! !\\
 \verb!:e ~/file! \hfill Edit a file.\\
-\verb!:tabe ~/file! \hfill Edit file in new tab.\\
-\verb!gt! \hfill Move one tab forward.\\
-\verb!gT! \hfill Move one tab backward.\\
 
 \section{Miscellaneous}
-\verb!:se ft=python! \hfill sets filetype.\\
-\verb!:so ~/file! \hfill rebuilds a file.\\
-\verb!:so %! \hfill rebuilds this file.\\
-\verb!:sav ~/file! \hfill Saves file elsewhere.\\
-\verb! !\\
 \verb!:!!\verb!ls -lah! \hfill Access the command line.\\
 \verb!:r !!\verb!date! \hfill Append command output to cursor.\\
 \verb! !\\
-\verb!:map ,s :sav<CR>! \hfill Map ",rs" to cmd. CR is Enter.\\
 
 \section{Defined in my .vimrc}
 
