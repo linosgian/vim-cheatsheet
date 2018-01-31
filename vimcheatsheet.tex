@@ -97,7 +97,7 @@
 \verb! !\\
 \verb!dd/cc! \hfill Delete/change entire line.\\
 \verb! !\\
-\verb!dj/cj! \hfill Delete/change two lines downward.\\\
+\verb!dj/cj! \hfill Delete/change two lines downward.\\
 \verb!dk/ck! \hfill Delete/change two lines upward.\\
 \verb! !\\
 \verb!d[motion]! \hfill Delete according to motion.\\
@@ -116,6 +116,13 @@
 \verb! !\\
 \verb!>>/<<! \hfill Indent/unindent in normal mode.\\
 \verb!=3j! \hfill Autoindent 3 lines after cursor.\\
+\verb!gcc! \hfill Comment lines (also works with text-objects).\\
+
+\verb! !\\
+\verb! !\\
+\verb! !\\
+\verb! !\\
+\verb! !\\
 
 \section{Search and Replace}
 \verb!/[searchterm]! \hfill Search. \verb!n/N! for next/previous.\\
@@ -128,33 +135,28 @@
 \verb!:%s:old:new:c! \hfill Prompt before each replacement.\\
 
 \section{Buffers, Windows and Tabs}
-\verb!:ls! \hfill List all buffers in session.\\
+\verb!:Ctrl + d ! \hfill Delete buffer but keep the current \\ \hfill window.\\
 \verb!:Tab! \hfill Navigate to next buffer.\\
 \verb! !\\
 \verb!:vs ~/file! \hfill Open file in vertical pane.\\
-\verb!:sp ~/file! \hfill Open file in horizontal pane.\\   
+\verb!:sp ~/file! \hfill Open file in horizontal pane.\\
 \verb! !\\
-\verb!Ctrl + h/j/k/l! \hfill Move to * window.\\
-\verb!Ctrl + w + 1+! \hfill Increase window height by 1.\\      
-\verb!Ctrl + w + 1-! \hfill Decrease window height by 1.\\                                                                        
-\verb!Ctrl + w + >!  \hfill Increase window width by 1.\\     
-\verb!Ctrl + w + <!  \hfill Decrease window width by 1.\\           
+\verb!Ctrl + h/j/k/l! \hfill Move to * window (works for \\ \hfill tmux too).\\
 \verb!Ctrl + w + =!  \hfill Equalize height and width of all windows.\\
 \verb! !\\
-\verb!:e ~/file! \hfill Edit a file.\\
 
-\section{Miscellaneous}
-\verb!:!!\verb!ls -lah! \hfill Access the command line.\\
-\verb!:r !!\verb!date! \hfill Append command output to cursor.\\
-\verb! !\\
+\section{fzf}
+\verb!Ctrl-p! \hfill Search file in project root.\\
+\verb!Ctrl-e! \hfill Search MRU files.\\
+\verb!Ctrl-g! \hfill Search for keyword in project root(all files)\\
+\verb!Ctrl-X! \hfill Open file in split.\\
+\verb!Ctrl-V! \hfill Open file in vertical split.\\
+\verb!Tab! \hfill Mark file to open multiple files.\\
 
-\section{Defined in my .vimrc}
-
-\verb!OO! \hfill Insert line above cursor.\\
-\verb!oo! \hfill Insert line below cursor.\\
-\verb!,ci! \hfill Toggle line comments.\\
-\verb!,n! \hfill Toggle file navigation.\\
-\verb!,k! \hfill Strip whitespace.\\
+\section{NERDTree}
+\verb!Ctrl-n! \hfill NERDTreeToggle\\
+\verb!l! \hfill Open current node\\
+\verb!Space! \hfill Open current node recursively\\
 
 \end{multicols}
 \end{document}
