@@ -55,13 +55,9 @@
 % \textbf{Remember: }\textit{These can all be used with a repeater.}
 
 \section{Movement}
-\verb!h/j/k/l! \hfill Move left/down/up/right.\\
 \verb!Space! \hfill Move half-screen down.\\
 \verb!Ctrl+b! \hfill Move half-screen up.\\
-\verb! !\\
-\verb!zt! \hfill Make cursor position top of window.\\
 \verb!zz! \hfill Make cursor position middle of window.\\
-\verb!zb! \hfill Make cursor position bottom of window.\\
 \verb! !\\
 \verb!w/b! \hfill Go to next/previous delimiter.\\
 \verb!W/B! \hfill Go to next/previous word.\\
@@ -74,17 +70,21 @@
 \verb!{/}! \hfill Go to beginning/end of paragraph.\\ 
 \verb!8gg! and \verb!8G! and \verb!:8! \hfill Go to line 8.\\
 \verb! !\\
-\verb!fP! \hfill Find next P in the line.\\
-\verb!FP! \hfill Find previous P in the line.\\
-\verb!tP! \hfill Find delimiter before next P.\\
-\verb!TP! \hfill Find delimiter after previous P.\\
-\verb! !\\
 \verb!v! \hfill Visual mode. \verb!j/k! to highlight text.\\
 \verb!V! \hfill Visual Line mode. Highlight full lines.\\
 \verb!gv! \hfill Reselect previously selected block of text\\
 \verb! !\\
+\verb!gf! \hfill Jump to file under cursor. \\
 \textit{In Visual mode, pressing \% under a bracket highlights until matching bracket.}\\
 \verb! !\\
+\verb! !\\
+\verb! !\\
+\verb! !\\
+\verb! !\\
+\verb! !\\
+\verb! !\\
+\verb! !\\
+
 
 \section{Editing}
 
@@ -122,11 +122,9 @@
 \verb! !\\
 \verb! !\\
 \verb! !\\
-\verb! !\\
 
 \section{Search and Replace}
 \verb!/[searchterm]! \hfill Search. \verb!n/N! for next/previous.\\
-\verb!?[searchterm]! \hfill Backward search.\\
 \textit{You can use regular expressions and escape chars.}\\
 \textit{Can be used as motions with delete, change, copy.}\\
 \verb! !\\
@@ -135,8 +133,8 @@
 \verb!:%s:old:new:c! \hfill Prompt before each replacement.\\
 
 \section{Buffers, Windows and Tabs}
-\verb!:Ctrl + d ! \hfill Delete buffer but keep the current \\ \hfill window.\\
-\verb!:Tab! \hfill Navigate to next buffer.\\
+\verb!Ctrl + d ! \hfill Delete buffer but keep the current \\ \hfill window.\\
+\verb!Tab! \hfill Navigate to next buffer.\\
 \verb! !\\
 \verb!:vs ~/file! \hfill Open file in vertical pane.\\
 \verb!:sp ~/file! \hfill Open file in horizontal pane.\\
@@ -149,6 +147,7 @@
 \verb!Ctrl-p! \hfill Search file in project root.\\
 \verb!Ctrl-e! \hfill Search MRU files.\\
 \verb!Ctrl-g! \hfill Search for keyword in project root(all files)\\
+\verb! !\\
 \verb!Ctrl-X! \hfill Open file in split.\\
 \verb!Ctrl-V! \hfill Open file in vertical split.\\
 \verb!Tab! \hfill Mark file to open multiple files.\\
